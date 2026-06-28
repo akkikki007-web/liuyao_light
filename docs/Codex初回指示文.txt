@@ -1,0 +1,5 @@
+このプロジェクトでは、まず docs/setup_checklist.md を確認し、
+uv / ruff / pytest / pre-commit / GitHub Actions / .gitignore の状態を点検してください。
+
+不足があれば、実装に入る前に開発環境を整備してください。
+実データ、SQLite DB、画像、バックアップ、.env はGit管理対象にしないでください。
