@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>六爻装卦ツール</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <aside id="controlsPanel" class="panel controls" aria-label="入力">
+          <div class="brand">
+            <div>
+              <h1>六爻装卦</h1>
+              <p>六数字から卦を立て、日月と爻の関係を画像化します。</p>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>起卦方法</span>
+            <span class="radio-row">
+              <label><input type="radio" name="castSource" value="digits" checked /> 六数字</label>
+              <label><input type="radio" name="castSource" value="hexagram" /> 卦名指定</label>
+            </span>
+          </label>
+
+          <label class="field" id="numberField">
+            <span>六数字</span>
+            <input id="numberInput" value="123456" inputmode="numeric" maxlength="6" />
+          </label>
+
+          <div class="hexagram-grid panel-input-grid hidden" id="hexagramFields">
+            <label class="field">
+              <span>本卦</span>
+              <select id="hexagramSelect"></select>
+            </label>
+            <label class="field">
+              <span>之卦</span>
+              <select id="changedHexagramSelect"></select>
+            </label>
+          </div>
+
+          <div class="field-grid panel-input-grid">
+            <label class="field">
+              <span>月建</span>
+              <select id="monthBranch"></select>
+            </label>
+            <label class="field">
+              <span>日干</span>
+              <select id="dayStem"></select>
+            </label>
+            <label class="field">
+              <span>日支</span>
+              <select id="dayBranch"></select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>起卦日時</span>
+            <input id="caseDateInput" type="datetime-local" />
+          </label>
+
+          <label class="check-field">
+            <input type="checkbox" id="whiteBackground" />
+            <span>背景を白にする</span>
+          </label>
+        </aside>
+
+        <section class="canvas-wrap" aria-label="出力">
+          <div class="chart-stage">
+            <canvas id="chartCanvas" width="1400" height="1120"></canvas>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
