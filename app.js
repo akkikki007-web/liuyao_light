@@ -358,7 +358,7 @@ function bodyInfluenceTags(prefix, bodyBranch, lineBranch) {
   else if (bodyEl === lineEl) tags.push(`${prefix}旺`);
   if (generating[bodyEl] === lineEl) tags.push(`${prefix}生`);
   if (controlling[bodyEl] === lineEl) tags.push(`${prefix}克`);
-  if (isPair(clashPairs, bodyBranch, lineBranch)) tags.push(`${prefix}冲`);
+  if (isPair(clashPairs, bodyBranch, lineBranch)) tags.push(`${prefix}破`);
   if (isPair(comboPairs, bodyBranch, lineBranch)) tags.push(`${prefix}合`);
   return tags;
 }
